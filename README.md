@@ -28,3 +28,15 @@ Input: Name = "Can", Age = 5, Day = "weekend", Student = "no" -> Output: "Can: 0
 Input: Name = "Deniz", Age = 10, Day = "weekday", Student = "yes" -> Output: "Zeynep: 120.00 TRY (Child) (Boundary test for 6 to 12 age range)
 Input: Name = "Zeynep", Age = 20, Day = "weekday", Student = "yes" -> Output: "Zeynep: 140.00 TRY (Student)" (Student discount test)
 Why does the order of the rules matter?: The rules are evaluated sequentially using if/elif statements. If the Student rule came before the Child rele, a 10 year old student would trigger the Student rule first.
+
+week04
+
+
+AI Tool Used:** None
+Prompt Used: None
+Libraries Used:`random` (used to randomly select a movie from the `movie_catalog` list and to generate a random compatibility float value), `math` (used to round down the compatibility score into an integer using `math.floor()`).
+-What did you change?:I created an IMDb movie rating and analysis tool that stores structured movie data (name, genre, and rating) in a list of dictionaries, takes the user's name as input, and outputs a formatted analysis report with a personalized recommendation.
+- Tests:
+  1. Input: Enter name "Ali" -> Output: Greets the user, randomly picks a movie from the catalog, displays its genre, predefined IMDb rating, and a calculated match percentage.
+  2. Input: Run the program again -> Output: Selects a different random movie with fresh compatibility stats.
+  3. Input: Empty name input -> Output: Successfully runs and handles the formatting without issues.
